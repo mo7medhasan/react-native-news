@@ -38,11 +38,34 @@ const styles=StyleSheet.create({
         borderRadius:20,
         paddingHorizontal:10,
     },
+    passwordContainer:{
+        width:300,
+        height:40,
+        borderColor:'gray',
+        borderWidth:1,
+        borderRadius:20,
+        flexDirection:'row',
+        alignItems:'center',
+        paddingHorizontal:10,
+    },
+    passwordInput:{
+        flex:1,
+        height:'100%',
+    },
+    eyeButton:{
+        paddingHorizontal:6,
+        justifyContent:'center',
+        alignItems:'center',
+    },
+    eyeIcon:{
+        fontSize:18,
+    },
     button:{
         marginTop:20,
-        width:200,
+        width:300,
+
         height:40,
-        backgroundColor:'blue',
+        backgroundColor:'gold',
         borderRadius:20,
         justifyContent:'center',
         alignItems:'center',
