@@ -15,7 +15,7 @@ export default function LoginScreen() {
   const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
   const handleLogin = () => {
-    if (email === 'admin' && password === 'admin') {
+    if (email === '' && password === '') {
       navigate(StackNames.MainTabs)
     } else {
       Alert.alert('Invalid email or password ' + email + ' ' + password)

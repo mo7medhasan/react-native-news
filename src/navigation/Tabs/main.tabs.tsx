@@ -4,9 +4,11 @@ import ScreenNames from '../ScreenNames';
 import HomeScreen from '../../srceens/HomeScreen/HomeScreen';
 import FavoritesScreen from '../../srceens/FavoritesScreen/FavoritesScreen';
 import Icon from 'react-native-vector-icons/Feather';
+import useStoreFavNews from '../../store/FavoritesStore';
 const Tab = createBottomTabNavigator<MainTabsList>();
 
 export default function MainTabs() {
+  const {FavNews}=useStoreFavNews();
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen name={ScreenNames.HomeScreen} component={HomeScreen}
@@ -29,6 +31,7 @@ export default function MainTabs() {
             <Icon name="heart" size={size} color={color} />
           )
         },
+        tabBarBadge: FavNews.length > 0 ? FavNews.length : undefined,
         tabBarActiveTintColor:"red",
         tabBarInactiveTintColor:"gray",
       }}

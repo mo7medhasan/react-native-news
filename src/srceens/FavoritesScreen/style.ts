@@ -2,10 +2,10 @@ import { StyleSheet } from 'react-native';
 import { Fonts } from '../../utils/constants/fonts';
 
 const styles = StyleSheet.create({
-  container: {
+  containerMain: {
     flex: 1,
     backgroundColor: 'white',
-    position: 'relative',
+    paddingHorizontal: 10,
   },
   header: {
     flexDirection: 'row',
@@ -28,12 +28,13 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   content: {
-    paddingHorizontal: 10,
-    paddingVertical: 10,
+    flex:3,
   },
   title: {
-    fontSize: 20,
+    fontSize: 16,
     fontFamily: Fonts.AtmaBold,
+    maxWidth:"85%",
+    flex:1
   },
   description: {
     fontSize: 16,
@@ -41,6 +42,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.AtmaRegular,
   },
   footer: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -56,13 +58,38 @@ const styles = StyleSheet.create({
   },
   footerButton: {
     padding: 10,
-    backgroundColor: 'gray',
-    fontSize: 16,
-    width: 50,
-    height: 50,
+    backgroundColor: 'white',
+    
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  containerList: {
+    marginTop: 10,
+  },
+  footerButtonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+  },
+  cardItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderRadius: 10,
+    marginBottom: 10,
+   
+    borderWidth: 1,
+    borderColor: 'black',
+    gap: 5,
+  },
+  imageStyle: {
+    borderRadius: 10,
+    flex:1,
+    width: 100,
+    height: 100,
   },
 });
 export default styles;
